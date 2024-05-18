@@ -48,8 +48,8 @@ class Speaker extends Model
                 ->maxLength(255),
             FileUpload::make('avatar')
                 ->avatar()
-                ->imageEditor()
-                ->maxSize(1024 * 1024 * 10),
+                ->imageEditor(),
+            // ->maxSize(1024 * 1024 * 10),
             TextInput::make('email')
                 ->email()
                 ->required()
@@ -88,5 +88,4 @@ class Speaker extends Model
                 ->maxLength(255),
         ];
     }
-
 }
